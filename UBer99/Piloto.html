@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script type="text/javascript" src="uber99.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Viagem</title>
+<link rel="stylesheet" href="Piloto.css">
+</head>
+<body>
+
+<div class="card">
+  <h2 style="text-align: center">Formulário de Viagem</h2>
+
+  <form action="/submit_form" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+    
+    <label for="contato">Número de Contato:</label><br>
+    <input  id="contato" name="contato" pattern="[0-9]{10,11}" required><br><br>
+    
+    <label for="horario">Horário:</label><br>
+    <input type="datetime-local" id="horario" name="horario" required><br><br>
+    
+    <label for="saida">Local de Saída:</label><br>
+    <input type="text" id="saida" name="saida" required><br><br>
+    
+    <label for="chegada">Local de Chegada:</label><br>
+    <input type="text" id="chegada" name="chegada" required><br><br>
+    
+    <label for="placa">Placa do Veículo:</label><br>
+    <input type="text" id="placa" name="placa" pattern="[A-Z]{3}-\d{4}" ><br><br>
+    
+    <input type="submit" onclick="Caronear()" value="Caronear">
+    <br><br>
+    <input type="submit" value="Buscar carona">
+  </form>
+</div>
+
+</body>
+</html>
+
